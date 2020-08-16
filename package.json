@@ -26,6 +26,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-svg-loader": "^3.0.3",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
     "typescript": "~3.7.2"
   },
   "scripts": {

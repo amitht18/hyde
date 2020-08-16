@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #9F4FFF;
+  --success-green: #2FDA68;
+  --danger-red: #E63946;
+  --alert-yellow: #FFE8B5;
+  --grey-100: #191923;
+  --grey-70: #4E4E67;
+  --grey-50: #9D9D9D;
+  --grey-30: #E2E2E2;
+  --grey-10: #F4F4F4;
+  --primary-transparent: opacify(--primary-color, 0.5);
+
+  --headline-font: 'Libre Baskerville', serif;
+  --body-font: 'Rubik', sans-serif;
+  --border-radius: 5px;
+}
+
+
+@mixin headline-100 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+@mixin headline-200 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text-100 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin text-200 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin text-300 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin label-100 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@mixin label-200 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+@mixin display-100 {
+  font-family: Libre Baskerville;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+@mixin display {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57px;
+}
+
+input {
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 12px;
+  width: 100%;
+  @include text-100;
+
+  &::placeholder {
+    color: var(--grey-50);
+  }
+
+  &:focus {
+    outline-color: var(--alert-yellow);
+  }
+}

@@ -1,0 +1,46 @@
+@import './../../../config.scss';
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  button {
+    color: var(--grey-70);
+    cursor: pointer;
+
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+
+    span {
+      @include text-100;
+    }
+  }
+
+  &.primary {
+
+    &:hover,
+    &.active {
+      button {
+        color: white;
+      }
+
+      background-color: var(--primary-color);
+    }
+  }
+}
