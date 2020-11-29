@@ -9,12 +9,12 @@ type ButtonType = 'icon' | 'text';
 
 interface Props {
   type: ButtonType;
-  Icon: Icontype;
+  Icon?: Icontype;
   label: string;
   classes?: string;
 }
 
-function getIcon(iconType: Icontype) {
+function getIcon(iconType: Icontype | undefined) {
   switch (iconType) {
     case ('trash'): {
       return <Trash />
@@ -26,18 +26,16 @@ function getIcon(iconType: Icontype) {
       return <Smiley />
     }
     default: {
-      return;
+      return null;
     }
   }
 }
 
 export default function ButtonComponent(props: Props) {
   return (
-    <div className={`${props.classes} button`}>
-      <button className={`${props.type}`}>
-        {getIcon(props.Icon)}
-        <span>{props.label}</span>
-      </button>
-    </div>
+    <button className={`${props.type} ${props.classes} button`}>
+      {getIcon(props.Icon)}
+      <span>{props.label}</span>
+    </button>
   )
 }

@@ -1,0 +1,50 @@
+@import './../../../config.scss';
+
+.hyde-modal {
+  >div {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin: 0;
+      color: var(--grey-100);
+      @include headline-200;
+    }
+
+    &-delete {
+      button span {
+        color: var(--danger-red);
+        @include text-200;
+      }
+    }
+  }
+
+  &__sub-header {
+    p {
+      margin: 0;
+      color: var(--grey-70);
+      @include text-100;
+    }
+  }
+
+  &__buttons {
+    >div {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .input-with-label {
+    label {
+      color: var(--grey-50);
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -11,11 +11,12 @@
   --grey-50: #9D9D9D;
   --grey-30: #E2E2E2;
   --grey-10: #F4F4F4;
-  --primary-transparent: opacify(--primary-color, 0.5);
+  --primary-transparent: rgba(246, 239, 255, 0.9);;
 
   --headline-font: 'Libre Baskerville', serif;
   --body-font: 'Rubik', sans-serif;
   --border-radius: 5px;
+  --modal-shadow: 0px 0px 10px 5px rgba(159, 79, 255, 0.25);
 }
 
 
@@ -65,6 +66,7 @@
   font-weight: bold;
   font-size: 10px;
   line-height: 12px;
+  text-transform: uppercase;
 }
 
 @mixin label-200 {
@@ -108,5 +110,11 @@ input {
 
   &:focus {
     outline-color: var(--alert-yellow);
+  }
+}
+
+.input-with-label {
+  label {
+    @include label-100;
   }
 }

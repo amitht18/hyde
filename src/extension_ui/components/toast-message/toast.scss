@@ -1,0 +1,28 @@
+@import './.././../../config.scss';
+
+.toast {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100% - 82px);
+  box-shadow: var(--modal-shadow);
+
+  span {
+    margin: 0;
+    @include text-100;
+  }
+
+  &.success {
+    color: var(--success-green);
+    border: 1px solid var(--success-green);
+  }
+
+  &.danger {
+    color: var(--danger-red);
+    border: 1px solid var(--danger-red);
+  }
+}

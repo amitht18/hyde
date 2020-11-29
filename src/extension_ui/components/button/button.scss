@@ -10,37 +10,53 @@ button {
   padding: 0;
 }
 
-.button {
+button.button {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  text-align: center;
+  color: var(--grey-70);
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  height: 100%;
 
-  button {
-    color: var(--grey-70);
-    cursor: pointer;
+  :not(:last-child) {
+    margin-right: 10px;
+  }
 
-    :not(:last-child) {
-      margin-right: 10px;
-    }
-
-    span {
-      @include text-100;
-    }
+  span {
+    @include text-100;
   }
 
   &.primary {
 
     &:hover,
     &.active {
-      button {
-        color: white;
-      }
-
+      color: white;
       background-color: var(--primary-color);
     }
+  }
+
+  &.secondary {
+    background-color: var(--grey-10);
+  }
+
+  &.full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &.danger {
+    background-color: var(--danger-red);
+    color: white;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 1px solid var(--alert-yellow);
   }
 }

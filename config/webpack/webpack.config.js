@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   // webpack will take the files from ./src/index
@@ -72,6 +73,7 @@ module.exports = {
       patterns: [
         { from: path.resolve(process.cwd(), 'extension'), to: path.resolve(process.cwd(), 'dist') }
       ],
-    })
+    }),
+    new ForkTsCheckerWebpackPlugin()
   ]
 };

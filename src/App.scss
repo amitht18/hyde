@@ -16,3 +16,16 @@ body {
   background-color: var(--grey-10);
   height: inherit;
 }
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a551ff85;
+  border-radius: 4px;
+}

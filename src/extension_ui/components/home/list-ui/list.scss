@@ -1,0 +1,44 @@
+@import './../../../../config.scss';
+
+.list-container {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  background-color: white;
+  height: 340px;
+  overflow-y: auto;
+
+  &__header {
+    display: flex;
+    background-color: var(--primary-color);
+    border-radius: 5px 5px 0px 0px;
+    padding: 4px;
+    margin: 0 20px;
+
+    &-text {
+      width: 40%;
+      color: white;
+      @include label-100;
+    }
+  }
+}
+
+.list-item {
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  transition: background-color 0.2s ease;
+
+  &__word, &__replacement {
+    width: 45%;
+    color: var(--grey-70);
+    @include text-100;
+  }
+
+  &__menu {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--primary-transparent);
+  }
+}
