@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import { history } from '../routing-utils/history';
-import SettingsComponent from './settings-component';
-import HomeComponent from './home-component';
+import SettingsComponent from './settings/settings-component';
+import HomeComponent from './home/home-component';
 import { PATHS } from '../routing-utils/paths';
 
 export default function AppRouter() {

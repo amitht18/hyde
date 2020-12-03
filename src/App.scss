@@ -1,0 +1,31 @@
+@import './config.scss';
+
+body {
+  width: 320px;
+  height: 460px;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  #root {
+    height: inherit;
+  }
+}
+
+.App {
+  background-color: var(--grey-10);
+  height: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a551ff85;
+  border-radius: 4px;
+}

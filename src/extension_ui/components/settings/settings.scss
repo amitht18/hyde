@@ -1,0 +1,87 @@
+@import './../../../config.scss';
+
+.settings {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: white;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &-back {
+      svg {
+        cursor: pointer;
+        transition: transform 0.4s ease-in-out;
+        transform: translateX(0px);
+
+        &:hover {
+          transform: translateX(-5px);
+        }
+      }
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      @include text-100;
+      color: var(--grey-70);
+    }
+  }
+
+  &__body {
+    display: grid;
+
+    &-background {
+      grid-row: 1;
+      grid-column: 1;
+      margin: 17px 0;
+    }
+
+    &-text {
+      grid-row: 1;
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include text-100;
+
+      &__count {
+        @include display;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    background: white;
+    padding: 8px 10px;
+    justify-content: space-between;
+
+    .button.delete {
+      &.primary {
+        &:hover {
+          transition: background-color 0.3s ease;
+          background-color: var(--danger-red);
+
+          svg path {
+            stroke: white;
+          }
+        }
+      }
+    }
+  }
+}
